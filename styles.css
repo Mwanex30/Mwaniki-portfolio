@@ -1,0 +1,235 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+  body{
+    background-color:#d3d9d4;
+    color:#333;
+    line-height:normal;
+    margin:0px;
+  }
+  h2{
+    color:white;
+  }
+  #nav-bar{
+    list-style-type:none;
+    margin:0;
+    padding:8px 5%;
+    background-color: #003135;
+    overflow:hidden;
+    position:fixed ;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+    box-shadow:0 2px 5px;
+    width:100%; 
+  }
+  #header-logo{
+    max-width:50px;
+    border-radius: 50%;
+  }
+  #nav-bar ul{
+    display:flex;
+    list-style-type:none;
+  }
+  #nav-bar ul li{
+    margin-left:16px;
+  }
+  .nav-link{
+    border-radius:5px;
+    color:white;
+    text-align:center;
+    padding:6px 10px;
+    text-decoration:none;
+    transition: all 0.3s ease;
+    font-weight:500;
+  }
+  .nav-link:hover:not(.active){
+    background-color:#964734;
+    color:black;
+  }
+  section{
+    padding:80px 10%;
+    margin-top:60px;
+    background-color:grey;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+  }
+  #home{
+    text-align:center;
+    background-color:#024950;
+    color:white;
+  }
+  #home h1{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+  #about{
+    display:flex;
+    flex-wrap:wrap;
+    align-items: center;
+    gap: 30px;
+    background-color:#024950;
+
+  }
+  #profile-image{
+    max-width:250px;
+    border-radius: 50%;
+    border:4px solid grey;
+  }
+  #about article{
+    flex:1;
+    min-width:300px;
+    color:white
+  }
+  .projects-section{
+    background-color:#024950;
+  }
+  .projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit);
+    gap:20px;
+    justify-items: center;
+  }
+  .project-tile{
+    text-decoration:none;
+    color:white ;
+    transition:transform 0.3s ease;
+  }
+  .project-tile:hover{
+    transform:scale(1.05);
+  }
+  .project-image{
+    max-width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+  }
+  .contact-section{
+    background-color:  #024950;
+    text-align:center;
+  }
+  .contact-links{
+    display:flex;
+    justify-content: center;
+    gap:30px;
+    margin-top:0px;
+  }
+  
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .fa:hover {
+    opacity: 0.7;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+    width:auto;
+  }
+  .fa-github {
+    background: grey;
+    color: white;
+    width: auto;
+  }
+  .fa-mailbox {
+    background: whitesmoke;
+    color: rgb(167, 14, 14);
+    width:100px;
+  }
+  footer{
+    background-color:#003135;
+    color:white;
+    text-align:center;
+    padding:20px;
+  }
+
+  h1,h2{
+    animation-duration: 6s;
+    animation-name: slide-in;
+  }
+  
+  @keyframes slide-in {
+    from {
+      translate: 40vw 0;
+      scale: 200% 1;
+    }   
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+  /*For usability across screen sizes*/
+  /*For mobile phones*/
+  @media screen and (max-width: 768px) {
+    #nav-bar {
+        flex-direction: column;
+        padding: 8px 2%;
+    }
+
+    #nav-bar ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #nav-bar ul li {
+        margin: 5px;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #profile-image {
+        max-width: 200px;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fa {
+        margin-bottom: 15px;
+    }
+}
+/*For mobile phones*/
+@media screen and (max-width: 480px) {
+    #nav-bar {
+        padding: 8px 2%;
+    }
+
+    #home h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 20px 3%;
+    }
+
+    .project-image {
+        height: 150px;
+    }
+}
